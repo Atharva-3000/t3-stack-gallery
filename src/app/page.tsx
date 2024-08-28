@@ -1,5 +1,6 @@
-import Link from "next/link";
 import { db } from "~/server/db";
+
+export const dynamic = "force-dynamic";
 
 const mockURLs = [
   "https://utfs.io/f/152ac3b2-d6c0-4890-8563-fa0100e68a77-jy5hs6.png",
