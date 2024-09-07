@@ -1,15 +1,16 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
+import posthog from "posthog-js";
 import { getMyImages } from "~/server/queries";
-
 export const dynamic = "force-dynamic";
 
 async function Images() {
   const images = await getMyImages();
-
+  posthog.capture('my event', { property: 'value' })
   return (
     <div className="flex flex-wrap justify-center gap-4 p-4">
+
       {images.map((image) => (
         <div key={image.id} className="flex h-48 w-48 flex-col">
           <Link href={`/img/${image.id}`}>
