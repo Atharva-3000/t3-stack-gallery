@@ -9,7 +9,8 @@ import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
 import { Metadata } from "next";
 import { Toaster } from "sonner";
-import { CSPostHogProvider } from "./providers";
+import { CSPostHogProvider } from "./_analytics/providers";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
