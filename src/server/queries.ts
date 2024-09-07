@@ -20,7 +20,7 @@ export async function getMyImages() {
 }
 
 export async function getImage(id: number) {
-    const user = auth();
+const user = auth();
 
     if (!user.userId) throw new Error("Unauthorized");
     const image = await db.query.images.findFirst({
