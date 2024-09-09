@@ -16,4 +16,5 @@
 - [x] Analytics (posthog)
 - [x] Delete button (w/ Server Actions)
 - [x] Ratelimiting (upstash)
-- [ ] Solve the problem of App crashing on upload right after Deletion.
+- [x] Solve the problem of App crashing on upload right after Deletion.
+        `use next@14.1.3`
